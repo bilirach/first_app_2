@@ -1,0 +1,19 @@
+<div data-role="header">
+  <h1>Listing notes</h1>
+</div>
+
+<div data-role="content">
+  <ul data-role="listview">
+    <% @etudiants.each do |etudiant| %>
+      <li>
+        <%= link_to etudiant do %>
+          <h1><%= etudiant.first_name %></h1>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div data-role="footer">
+  <%= link_to 'New Note', new_etudiant_path %>
+</div>

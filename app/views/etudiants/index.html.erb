@@ -1,0 +1,15 @@
+<h1>Liste des etudiants</h1>
+
+<table class="pretty">
+  <tr>
+    <th><%= sortable "first_name","Nom" %></th>
+    <th><%= sortable "last_name","Prenom" %></th>
+    <th><%= sortable "phone_number","Télephone" %></th>
+    <th><%= sortable "description","Description" %></th>
+    <th>Op&eacute;rations</th>
+  </tr>
+
+<div id="etudiants"><%= render 'etudiants' %></div>
+<br />
+
+<%= link_to 'New Etudiant', new_etudiant_path %>

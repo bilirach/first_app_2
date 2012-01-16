@@ -1,0 +1,17 @@
+<% @etudiants.each do |etudiant| %>
+  <tr>
+    <td><%= etudiant.first_name %></td>
+    <td><%= etudiant.last_name %></td>
+    <td><%= etudiant.phone_number %></td>
+    <td><%= etudiant.description %></td>
+    <td colspan=3 ><%= link_to 'Show', etudiant %> | 
+    <%= link_to 'Edit', edit_etudiant_path(etudiant) %> | 
+    <%= link_to 'Destroy', etudiant, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+<!--<div class="digg_pagination">-->
+    <!--<div clas="page_info">
+      <%= page_entries_info @etudiants %>
+    </div>-->
+<%= will_paginate @etudiants%>

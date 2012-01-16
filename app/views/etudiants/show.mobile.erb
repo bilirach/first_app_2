@@ -1,0 +1,17 @@
+<div data-role="header">
+  <h1><%= @etudiant.first_name %></h1>
+  <%= link_to 'Back', etudiants_path, "class" => "ui-btn-left", "data-icon" => "back" %>
+</div>
+
+<div data-role="content">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <%= @etudiant.last_name %>
+  </p>
+
+</div>
+
+<div data-role="footer">
+  <%= link_to 'Edit', edit_etudiant_path(@etudiant) %>
+</div>
