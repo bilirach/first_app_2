@@ -3,10 +3,10 @@ class EtudiantsController < ApplicationController
   
   def index
     @etudiants = Etudiant.order(sort_column + " " + sort_direction).paginate(:page => params[:page],:per_page=>2)
-	#respond_to do |format|
-      #format.html # index.html.erb
-      #format.js
-    #end
+	respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   # GET /etudiants/1

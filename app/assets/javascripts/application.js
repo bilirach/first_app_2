@@ -7,10 +7,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require rails.validations
-$(function() {
-  $("#etudiants th a, #etudiants .pagination a").live("click", function() {
-    $.getScript(this.href);
-    return false;
-})
-
-});
+//= require_tree .

@@ -3,3 +3,18 @@
 
 en:
   hello: "Hello world"
+  will_paginate:
+    previous_label: "&#8592; Pr&eacute;cedent"
+    next_label: "Suivant &#8594;"
+    page_gap: "&hellip;"
+  page_entries_info:
+      single_page:
+        zero:  "Aucun(e) %{model} trouve"
+        one:   "Affichage 1 %{model}"
+        other: "Affichage de %{count} %{model}(s)"
+      single_page_html:
+        zero:  "Aucun(e) %{model} trouv&eacute;"
+        one:   "Affichage <b>1</b> %{model}"
+        other: "Affichage de<b>&nbsp;%{count}</b> %{model}(s)"
+      multi_page: "Affichage %{model}(s) %{from} - %{to} de %{count} en total"
+      multi_page_html: "Affichage %{model}(s) <b>%{from}&nbsp;-&nbsp;%{to}</b> de <b>%{count}</b> en total"

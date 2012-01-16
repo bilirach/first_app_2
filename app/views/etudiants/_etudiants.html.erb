@@ -1,5 +1,13 @@
-<% @etudiants.each do |etudiant| %>
+<table class="pretty" cellspacing="0">
   <tr>
+    <th><%= sortable "first_name","Nom" %></th>
+    <th><%= sortable "last_name","Prenom" %></th>
+    <th><%= sortable "phone_number","Télephone" %></th>
+    <th><%= sortable "description","Description" %></th>
+    <th>Op&eacute;rations</th>
+  </tr>
+<% @etudiants.each do |etudiant| %>
+  <tr class="<%=cycle('even', 'odd')%>">
     <td><%= etudiant.first_name %></td>
     <td><%= etudiant.last_name %></td>
     <td><%= etudiant.phone_number %></td>
@@ -10,8 +18,9 @@
   </tr>
 <% end %>
 </table>
-<!--<div class="digg_pagination">-->
-    <!--<div clas="page_info">
+<div class="digg_pagination">
+    <div class="page_info">
       <%= page_entries_info @etudiants %>
-    </div>-->
+    </div>
 <%= will_paginate @etudiants%>
+</div>

@@ -11,6 +11,27 @@ h1{
 	color: #CC;
 	font-size:14px;
 }
+a{
+	color: #000033;
+	text-decoration: none;
+}
+table{
+	padding:0px;
+	border: 1px solid #2e6ab1;
+}
+table th{
+	padding:10px;
+	background-color:#2e6ab1; 
+}
+table td{
+	padding: 5px;
+}
+table tr.even td {
+  background-color: #eee;
+}
+table tr.odd  td {
+  background-color: #fff;
+}
 
 .pretty th .current {
   padding-right: 12px;
