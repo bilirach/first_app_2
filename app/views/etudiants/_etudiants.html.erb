@@ -5,7 +5,6 @@
     <th><%= sortable "last_name","Prenom" %></th>
     <th><%= sortable "phone_number","Télephone" %></th>
     <th><%= sortable "description","Description" %></th>
-    <th>Image</th>
   </tr>
   </thead>
 <tbody>
@@ -15,7 +14,6 @@
     <td><%= etudiant.last_name %></td>
     <td><%= etudiant.phone_number %></td>
     <td><%= etudiant.description %></td>
-	<td><%= image_tag etudiant.image_url(:thumb).to_s ? if etudiant.image? %></td>
     <!--<%= link_to 'Destroy', etudiant, confirm: 'Are you sure?', method: :delete %>-->
   </tr>
 <% end %>
