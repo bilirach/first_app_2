@@ -1,26 +1,29 @@
-<table class="pretty" cellspacing="0">
+<table id="thetable" cellspacing="0" width="100%" >
+  <thead>
   <tr>
     <th><%= sortable "first_name","Nom" %></th>
     <th><%= sortable "last_name","Prenom" %></th>
     <th><%= sortable "phone_number","Télephone" %></th>
     <th><%= sortable "description","Description" %></th>
-    <th>Op&eacute;rations</th>
+    <th>Image</th>
   </tr>
+  </thead>
+<tbody>
 <% @etudiants.each do |etudiant| %>
   <tr class="<%=cycle('even', 'odd')%>">
-    <td><%= etudiant.first_name %></td>
+    <td><%= link_to etudiant.first_name, etudiant %></td>
     <td><%= etudiant.last_name %></td>
     <td><%= etudiant.phone_number %></td>
     <td><%= etudiant.description %></td>
-    <td colspan=3 ><%= link_to 'Show', etudiant %> | 
-    <%= link_to 'Edit', edit_etudiant_path(etudiant) %> | 
-    <%= link_to 'Destroy', etudiant, confirm: 'Are you sure?', method: :delete %></td>
+	<td><%= image_tag etudiant.image_url(:thumb).to_s %></td>
+    <!--<%= link_to 'Destroy', etudiant, confirm: 'Are you sure?', method: :delete %>-->
   </tr>
 <% end %>
+</tbody>
 </table>
-<div class="digg_pagination">
-    <div class="page_info">
+<div class="flickr_pagination">
+    <!--<div class="page_info">
       <%= page_entries_info @etudiants %>
-    </div>
+    </div>-->
 <%= will_paginate @etudiants%>
 </div>

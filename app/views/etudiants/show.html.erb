@@ -19,7 +19,11 @@
   <b>Description:</b>
   <%= @etudiant.description %>
 </p>
-
-
+<% if @etudiant.image?%>
+<p>
+  <b>Image:</b>
+  <%= image_tag @etudiant.image_url(:thumb).to_s %>
+</p>
+<%end%>
 <%= link_to 'Edit', edit_etudiant_path(@etudiant) %> |
 <%= link_to 'Back', etudiants_path %>

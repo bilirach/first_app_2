@@ -8,24 +8,10 @@
 </head>
 <body>
 <div id="container">
-    <div class="menu">
-        <ul>
-            <li>
-                <%= link_to '#' do %>
-					Contact<span class="arrow"></span>
-				<%end%>
-                <ul>
-                    <li><a href="mailto:bilal.zerrik@gmail.com">Contacter par e-mail</a></li>
-                </ul>
-            </li>
-			<li>
-                <%= link_to 'Salam', '#'%>
-            </li>
-        </ul>
-    </div>
+	<%= menu [['Etudiants',['Nouveau Etudiant','/etudiants/new'],['Liste des etudiants','/etudiants']],'Aide'] %>
+	<div id="loader" style="display: none;position: fixed;"><span><img src="/assets/loading.gif" alt="chargement..."/></span></div>
 	<div id="content">
-		<div id="loader" style="display: none;"><span><img src="/assets/loading.gif" alt="chargement..."/></span></div>
-			<%= yield %>
+		<%= yield %>
 	</div>
 </div>
 </body>

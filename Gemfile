@@ -33,6 +33,10 @@ end
 
 gem 'jquery-rails'
 
+gem "rmagick", "2.13.1", :require => 'RMagick'
+
+gem 'carrierwave'
+
 #gem 'jquery_mobile_rails'
 
 gem 'will_paginate'

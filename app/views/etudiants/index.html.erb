@@ -1,4 +1,5 @@
 <h1>Liste des etudiants</h1>
 <div id="etudiants"><%= render partial: 'etudiants' %></div>
 <br />
+<a href="#" onclick='$("#etudiants").load("etudiants/new");'>salam</a><br>
 <%= link_to 'New Etudiant', new_etudiant_path %>

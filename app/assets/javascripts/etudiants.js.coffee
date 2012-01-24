@@ -19,4 +19,5 @@ $ ->
             else
                 $(this).parent().parent().find('.active').removeClass('active')
                 $(this).parent().addClass('active')
+  
   $.fixedMenu()
